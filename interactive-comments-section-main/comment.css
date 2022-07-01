@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
+
+* , *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1440px;
+    height: 100vh;
+    background-color: hsl(228, 33%, 97%);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+.mainAncestor {
+    width: 100%;
+    height: 100%;
+}
+
+.mainContainer {
+    margin: 50px 300px 0px;
+    position: relative;
+}
+
+.textareaAncestor {
+    margin: 0px 300px 10px;
+}
+
+.reply-mainParentContainer {
+    position: relative;
+}
+
+.reply-mainParentContainer::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    left: 60px;
+}
+
+.mainParent , .reply-miniParent , .textareaContainer {
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 150px;
+    max-width: 650px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 150px;
+}
+
+.reply-miniParent , #reply-grandIdjuliusomo0 , #grandIdFromReplyFunctionjuliusomo0 {
+    max-width: 550px;
+    margin-left: 100px;
+}
+
+.scoreParentContainer , .reply-scoreParentContainer {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.profileAndDataContainer , .reply-profileAndDataContainer {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.commentContainer , .reply-commentContainer{
+    grid-column: 2 / 5;
+    grid-row: 2;
+}
+
+.toolsContainer , .reply-toolsContainer{
+    grid-column: 4 / 5;
+    grid-row: 1;
+}
+
+.scoreParentContainer , .reply-scoreParentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scoreContainer , .reply-scoreContainer{
+    background-color: hsl(228, 33%, 97%);
+    width: 30px;
+    height: 90px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 5px;
+}
+
+.scorePlus , .reply-scorePlus{
+    margin-top: 10px;
+    background-image: url(./images/icon-plus.svg);
+}
+
+.scoreMinus , .reply-scoreMinus {
+    background-image: url(./images/icon-minus.svg);
+}
+
+.scoreNumber , .reply-scoreNumber{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  hsl(238, 40%, 52%);
+    font-weight: bold;
+
+}
+
+.scorePlus , .scoreMinus , .reply-scorePlus , .reply-scoreMinus {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 14px;
+    margin-left: 7.5px;
+    cursor: pointer;
+}
+
+.scorePlus:hover , .scoreMinus:hover , .reply-scorePlus:hover , .reply-scoreMinus:hover {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(437%) hue-rotate(200deg) brightness(92%) contrast(89%);
+}
+
+.profileAndDataContainer , .reply-profileAndDataContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profileImg , .reply-profileImg {
+    width: 30px;
+    height: 30px;
+}
+
+.date , .reply-date {
+    opacity: .4;
+}
+
+.profileName , .reply-profileName {
+    color: hsl(212, 24%, 26%);
+}
+
+.profileName , .date , .reply-profileName , .reply-date {
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.commentContainer , .reply-commentContainer {
+    max-width: 550px;
+    margin-top: -5px;
+}
+
+.reply-commentContainer {
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+
+.comment , .reply-comment {
+    font-weight: bold;
+    font-size: 14px;
+    opacity: .4;
+    padding: 0px 30px 30px 0px;
+}
+
+.reply-comment {
+    display: inline;
+}
+
+.replyTo {
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.toolsContainer , .reply-toolsContainer {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.replyContainer , .deleteContainer , .editContainer , .reply-replyContainer , .reply-deleteContainer , .reply-editContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-right: 20px;
+    user-select: none;
+}
+
+.replyButton , .reply-replyButton {
+    background-image: url(./images/icon-reply.svg);
+}
+
+.replyButton:hover , .reply-replyButton:hover {
+    color: hsl(239, 57%, 85%);
+}
+
+.deleteButton , .reply-deleteButton {
+    background-image: url(./images/icon-delete.svg);
+}
+
+.editButton , .reply-editButton {
+    background-image: url(./images/icon-edit.svg);
+}
+
+.replyButton , .reply-replyButton , .deleteButton , .reply-deleteButton , .editButton , .reply-editButton {
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 30px;
+    background-position: left bottom;
+}
+
+.replyButton , .reply-replyButton , .editButton , .reply-editButton {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(437%) hue-rotate(200deg) brightness(92%) contrast(89%);
+}
+
+.reply , .reply-reply , .edit , .reply-edit{
+    padding-top: 20px;
+    color: hsl(238, 40%, 52%);
+}
+
+.replyContainer:hover , .reply-replyContainer:hover , .editContainer:hover , .reply-editContainer:hover {
+    color: hsl(239, 57%, 85%);
+    filter: brightness(0) saturate(100%) invert(79%) sepia(9%) saturate(871%) hue-rotate(201deg) brightness(102%) contrast(87%);
+}
+
+.deleteContainer , .editContainer , .reply-deleteContainer , .reply-editContainer {
+    display: none;
+    padding-bottom: 20px;
+}
+
+#tools4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#tools0 {
+    display: flex;
+}
+
+#reply4 {
+    display: none;
+}
+
+#reply0 {
+    display: none;
+}
+
+.reply-delete , .delete {
+    padding-top: 20px;
+    color: hsl(358, 79%, 66%);
+}
+
+.deleteContainer:hover , .reply-deleteContainer:hover {
+    color: hsl(357, 100%, 86%);
+    filter: brightness(0) saturate(100%) invert(73%) sepia(6%) saturate(1878%) hue-rotate(309deg) brightness(107%) contrast(100%);
+}
+
+#delete4 , #edit4 , #delete0 , #edit0 {
+    display: flex;
+}
+
+#you3 {
+    display: none;
+}
+
+#you4 {
+    background-color: hsl(238, 40%, 52%);
+    font-size: 12px;
+    color: #ffff;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.youDiv {
+    background-color: hsl(238, 40%, 52%);
+    font-size: 12px;
+    color: #ffff;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.grandParent {
+    padding-bottom: 10px;
+
+}
+
+.textareaContainer {
+    width: 100%;
+    height: 150px;
+}
+
+.textareaImageContainer {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    padding: 20px 0px 0px 30px ;
+}
+
+.textareaImage {
+    width: 50px;
+    height: 50px;
+}
+
+.miniTextareaContainer {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    padding: 20px 0 10px 20px;
+}
+
+.textarea {
+    width: 95%;
+    height: 90%;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(223, 19%, 93%);
+    outline: none;
+    font-size: 14px;
+}
+
+.textarea:focus {
+    outline: 1px solid hsl(238, 40%, 52%);
+}
+
+.sentButtonContainer {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    padding: 20px 20px 0 0;
+}
+
+.sentButton {
+    padding: 10px 20px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(238, 40%, 52%);
+    color: #ffff;
+    cursor: pointer;
+}
+
+.sentButton:hover {
+    background-color: hsl(239, 57%, 85%);
+}
+
+@media (max-width: 760px) {
+
+    .mainContainer {
+        margin: 20px 35px 5px;
+    }
+
+    .textareaAncestor {
+        margin: 0px 35px;
+    }
+
+    .mainParent , .reply-miniParent , .textareaContainer , #reply-grandIdjuliusomo0 {
+        width: 400px;
+        min-height: 200px;
+        margin-bottom: 5px;
+        grid-template-rows: repeat(3, 1fr);
+        position: relative;
+    }
+
+    .reply-mainParentContainer::after {
+        left: 0px;
+    }
+
+    .reply-miniParent , #reply-grandIdjuliusomo0 {
+        width: 380px;
+        height: 200px;
+        margin: 10px 0;
+        margin-left: 20px;
+    }
+
+    .scoreParentContainer , .reply-scoreParentContainer {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        margin-bottom: 20px;
+    }
+    
+    .profileAndDataContainer , .reply-profileAndDataContainer {
+        grid-column: 1 / 5;
+        grid-row: 1;
+        padding-left: 20px;
+        padding-top: 10px;
+        position: relative;
+    }
+    
+    .commentContainer , .reply-commentContainer{
+        grid-column: 1 / 5;
+        grid-row: 2;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    
+    .toolsContainer , .reply-toolsContainer{
+        grid-column: 3 / 5;
+        grid-row: 3;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .reply , .reply-reply , .delete , .reply-delete , .edit , .reply-edit {
+        padding-top: 0;
+    }
+
+    .replyButton , .reply-replyButton , .deleteButton , .reply-deleteButton , .editButton , .reply-editButton {
+        background-position: left;
+    }
+
+    .scoreContainer , .reply-scoreContainer {
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30px;
+        width: 90px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .scorePlus , .reply-scorePlus {
+        background-position: top center;
+    }
+
+    .scoreMinus , .reply-scoreMinus {
+        background-position: bottom center;
+        margin-top: 3px;
+    }
+
+    .comment , .reply-comment {
+        padding-bottom: 10px;
+    }
+
+    .miniTextareaContainer {
+        grid-column: 1 / 5;
+        grid-row: 1 / 3;
+    }
+
+    .textarea {
+        padding: 10px 0 0 20px;
+    }
+
+    .textareaImageContainer {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        padding: 0 0 20px 20px;
+    }
+
+    .textareaImage {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sentButtonContainer {
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
+        padding: 0 20px 20px 0;
+        display: flex;
+        justify-content: right;
+    }
+
+    .sentButton {
+        padding: 0px 20px;
+        letter-spacing: 2px;
+    }
+
+    .grandParent {
+        bottom: -230px;
+    }
+}
